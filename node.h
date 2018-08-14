@@ -5,8 +5,8 @@
 
 class Node {
 	char stored_char = 0;
-	Node* prev_node = 0;
-	Node* next_node = 0;
+	Node* prev_node = nullptr;
+	Node* next_node = nullptr;
  public:
   explicit Node(char data);
   char GetData();
