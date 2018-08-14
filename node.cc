@@ -29,9 +29,9 @@ Node* Node::InsertPreviousNode(char data) {
 		new_node->next_node = this;
 	}
 	else {
-		Node* t_prev_node = prev_node;
-		t_prev_node->next_node = new_node;
-		new_node->prev_node = t_prev_node;
+		Node* temp_prev_node = prev_node;
+		temp_prev_node->next_node = new_node;
+		new_node->prev_node = temp_prev_node;
 		new_node->next_node = this;
 		prev_node = new_node;
 	}
@@ -46,11 +46,11 @@ Node* Node::InsertNextNode(char data) {
 		new_node->prev_node = this;
 	}
 	else {
-		Node* t_next_node = next_node;
+		Node* temp_next_node = next_node;
 		next_node = new_node;
 		new_node->prev_node = this;
-		new_node->next_node = t_next_node;
-		t_next_node->prev_node = new_node;
+		new_node->next_node = temp_next_node;
+		temp_next_node->prev_node = new_node;
 	}
 	return new_node;
 }
